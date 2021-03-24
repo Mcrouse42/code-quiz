@@ -7,7 +7,7 @@ var viewHighScoresEl = document.querySelector(".view-high-scores");
 var timerEl = document.querySelector("#time-left");
 var startBtnEl = document.querySelector(".start-btn");
 var timerContentEl = document.querySelector(".timer-container");
-
+var headerContentEl = document.querySelector(".header-content");
 var pageContentEl = document.querySelector("#page-content");
 
 // Array for questions
@@ -119,4 +119,18 @@ function printQuestion() {
   answer4El.value = "4";
   answer4El.textContent = questions[i].choices[3];
   answersContainerEl.appendChild(answer4El);
+}
+
+// Function to start the quiz/timer and display the first question
+function startQuiz() {
+    timerEl.textContent = timer;
+    countdown = setInterval(function() {
+        timer--
+        timerEl.textContent = timer;
+        if (timer <= 0) {
+            clearInterval(countdown);
+            displayScore();
+        }  
+    },1000);
+    printQuestion();
 }
