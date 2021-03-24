@@ -1,8 +1,4 @@
-
-
-
-
-
+var timer = 75;
 
 // Array for questions
 var questions = [
@@ -41,11 +37,11 @@ var questions = [
   {
     title: "How does a for loop start?",
     choices: [
-      '1. for (i<=5; i++)',
-      '2. for i =1 to 5',
-      '3. for (i = 0; i<= 5)',
-      '4. for (i=0; i<=5; i++)',
+      "1. for (i<=5; i++)",
+      "2. for i =1 to 5",
+      "3. for (i = 0; i<= 5)",
+      "4. for (i=0; i<=5; i++)",
     ],
-    answer: '4. for (i=0; i<=5; i++)',
+    answer: "4. for (i=0; i<=5; i++)",
   },
 ];
