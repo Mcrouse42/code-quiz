@@ -134,3 +134,59 @@ function startQuiz() {
     },1000);
     printQuestion();
 }
+
+// Function to check answer
+function checkAnswer(event) {
+    var targetEl = event.target;
+    if (targetEl.matches(".answers")) {
+        console.log(questions[i].answer.charAt(0) === targetEl.value);
+        if (questions[i].answer.charAt(0) === targetEl.value) {
+            //print correct on screen for 1 second 
+            i++;
+            if (i < questions.length) {
+                printQuestion();
+                var correct = document.createElement("p");
+                correct.className = "correct";
+                correct.textContent = "Correct!";
+                pageContentEl.appendChild(correct);
+                setTimeout(function() {
+                    correct.className = "hide";
+                }, 2000);
+                // clear p tag
+            } else {
+                clearInterval(countdown);
+                displayScore();
+                var correct = document.createElement("p");
+                correct.className = "correct";
+                correct.textContent = "Correct!";
+                pageContentEl.appendChild(correct);
+                setTimeout(function() {
+                    correct.className = "hide";
+                }, 2000);
+            }
+        } else {
+            timer -= 10
+            i++;
+            if (i < questions.length) {
+                printQuestion();
+                var wrong = document.createElement("p");
+                wrong.className = "wrong";
+                wrong.textContent = "Wrong!";
+                pageContentEl.appendChild(wrong);
+                setTimeout(function() {
+                    wrong.className = "hide";
+                }, 2000);
+            } else {
+                clearInterval(countdown);
+                displayScore();
+                var wrong = document.createElement("p");
+                wrong.className = "wrong";
+                wrong.textContent = "Wrong!";
+                pageContentEl.appendChild(wrong);
+                setTimeout(function() {
+                    wrong.className = "hide";
+                }, 2000);
+            }
+        }
+    }
+}
