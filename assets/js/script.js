@@ -1,8 +1,11 @@
 var timer = 75;
+var i = 0;
+var initialScores = JSON.parse(localStorage.getItem("initialScores")) || [];
+var countdown;
 
 var viewHighScoresEl = document.querySelector(".view-high-scores");
-
-
+var timerEl = document.querySelector("#time-left");
+var startBtnEl = document.querySelector(".start-btn");
 
 
 var pageContentEl = document.querySelector("#page-content");
@@ -74,4 +77,12 @@ function loadLandingPage() {
 // Function to view High Scores when 'View High Scores' is clicked
 function viewHighScores() {
   highScoresPage();
+}
+
+// This function runs when 'Start Quiz' is clicked in order to run startQuiz function
+function startQuizClick(event) {
+    var targetEl = event.target;
+    if (targetEl.matches(".start-btn")) {
+        startQuiz();
+    }
 }
