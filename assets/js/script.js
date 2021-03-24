@@ -45,3 +45,21 @@ var questions = [
     answer: "4. for (i=0; i<=5; i++)",
   },
 ];
+
+// Function to load the landing page for the quiz
+function loadLandingPage() {
+    var quizTitleEl = document.createElement("h2");
+    quizTitleEl.className = "title-question";
+    quizTitleEl.textContent = "Coding Quiz Challenge";
+    pageContentEl.appendChild(quizTitleEl);
+
+    var quizDescriptionEl = document.createElement("p");
+    quizDescriptionEl.className = "quiz-description";
+    quizDescriptionEl.textContent = 'Answer all of the following coding-related questions within the time limit. If you choose the incorrect answer your score/time will be reduced by ten seconds!'
+    pageContentEl.appendChild(quizDescriptionEl);
+
+    var startBtnContainerEl = document.createElement("div");
+    startBtnContainerEl.className = "start-btn-container";
+    startBtnContainerEl.innerHTML = "<button class='start-btn'>Start Quiz</button>";
+    pageContentEl.appendChild(startBtnContainerEl);
+}
