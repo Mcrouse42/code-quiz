@@ -1,5 +1,12 @@
 var timer = 75;
 
+var viewHighScoresEl = document.querySelector(".view-high-scores");
+
+
+
+
+var pageContentEl = document.querySelector("#page-content");
+
 // Array for questions
 var questions = [
   {
@@ -62,4 +69,9 @@ function loadLandingPage() {
     startBtnContainerEl.className = "start-btn-container";
     startBtnContainerEl.innerHTML = "<button class='start-btn'>Start Quiz</button>";
     pageContentEl.appendChild(startBtnContainerEl);
+}
+
+// Function to view High Scores when 'View High Scores' is clicked
+function viewHighScores() {
+  highScoresPage();
 }
