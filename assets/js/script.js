@@ -6,7 +6,7 @@ var countdown;
 var viewHighScoresEl = document.querySelector(".view-high-scores");
 var timerEl = document.querySelector("#time-left");
 var startBtnEl = document.querySelector(".start-btn");
-
+var timerContentEl = document.querySelector(".timer-container");
 
 var pageContentEl = document.querySelector("#page-content");
 
@@ -85,4 +85,38 @@ function startQuizClick(event) {
     if (targetEl.matches(".start-btn")) {
         startQuiz();
     }
+}
+
+function printQuestion() {
+  // Clear landing page/main content
+  document.getElementById("page-content").innerHTML = "";
+  // Display question
+  var questionEl = document.createElement("h2");
+  questionEl.className = "title-question";
+  questionEl.textContent = questions[i].title;
+  pageContentEl.appendChild(questionEl);
+  // Display choices
+  var answersContainerEl = document.createElement("div");
+  answersContainerEl.className = "answers-container";
+  pageContentEl.appendChild(answersContainerEl);
+  var answer1El = document.createElement("button");
+  answer1El.className = "answers";
+  answer1El.value = "1";
+  answer1El.textContent = questions[i].choices[0];
+  answersContainerEl.appendChild(answer1El);
+  var answer2El = document.createElement("button");
+  answer2El.className = "answers";
+  answer2El.value = "2";
+  answer2El.textContent = questions[i].choices[1];
+  answersContainerEl.appendChild(answer2El);
+  var answer3El = document.createElement("button");
+  answer3El.className = "answers";
+  answer3El.value = "3";
+  answer3El.textContent = questions[i].choices[2];
+  answersContainerEl.appendChild(answer3El);
+  var answer4El = document.createElement("button");
+  answer4El.className = "answers";
+  answer4El.value = "4";
+  answer4El.textContent = questions[i].choices[3];
+  answersContainerEl.appendChild(answer4El);
 }
