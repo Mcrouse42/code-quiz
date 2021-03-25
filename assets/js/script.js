@@ -273,3 +273,10 @@ function highScoresPage() {
     buttonsContainerEl.appendChild(clearBtn);
 
 }
+
+function restart(event) {
+  var targetEl = event.target;
+  if (targetEl.matches(".back-btn")) {
+    location.reload();
+  }
+}
