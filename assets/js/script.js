@@ -280,3 +280,13 @@ function restart(event) {
     location.reload();
   }
 }
+
+
+
+// Event Listeners Here:
+viewHighScoresEl.addEventListener("click", viewHighScores);
+pageContentEl.addEventListener("click", startQuizClick);
+pageContentEl.addEventListener("click", checkAnswer);
+pageContentEl.addEventListener("submit", initialSubmitHandler);
+pageContentEl.addEventListener("click", restart);
+pageContentEl.addEventListener("click", clearStorage);
