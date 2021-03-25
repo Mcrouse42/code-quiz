@@ -282,6 +282,19 @@ function restart(event) {
 }
 
 
+function clearStorage(event) {
+  var targetEl = event.target;
+  if (targetEl.matches(".clear-btn")) {
+    localStorage.removeItem("initialScores");
+    initialScores.length = 0;
+    highScoresPage();
+    //var scoresListContainerEl = document.createElement("div");
+    //scoresListContainerEl.innerHTML = '';
+    // add way to clear storage
+  }
+}
+
+
 
 // Event Listeners Here:
 viewHighScoresEl.addEventListener("click", viewHighScores);
