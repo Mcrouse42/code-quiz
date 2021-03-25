@@ -231,3 +231,45 @@ function initialSubmitHandler(event) {
     localStorage.setItem("initialScores", JSON.stringify(initialScores));
     highScoresPage();
 }
+
+// Function to display High Scores Page
+function highScoresPage() {
+    document.getElementById("header-content").innerHTML = "";
+    document.getElementById("page-content").innerHTML = "";
+    
+    var scoreTitleEl = document.createElement("h2");
+    scoreTitleEl.className = "title-question";
+    scoreTitleEl.textContent = "High Scores";
+    pageContentEl.appendChild(scoreTitleEl);
+    
+    var scoresListContainerEl = document.createElement("div");
+    scoresListContainerEl.className = "scores-list-container";
+    pageContentEl.appendChild(scoresListContainerEl);
+    
+    var scoresOlEl = document.createElement("ol");
+    scoresOlEl.className = "scores-list-ol";
+    scoresListContainerEl.appendChild(scoresOlEl);
+    
+    // loop through and display scores 
+    for (var i = 0; i < initialScores.length; i++) {
+      var scoresLiEl = document.createElement("li");
+    scoresLiEl.className = "scores-list-li";
+    scoresLiEl.textContent = (i+1) + '. ' + initialScores[i].initials + ' - ' + initialScores[i].score;
+    scoresOlEl.appendChild(scoresLiEl);  
+    }
+    
+    var buttonsContainerEl = document.createElement("div");
+    buttonsContainerEl.className = "buttons-container";
+    pageContentEl.appendChild(buttonsContainerEl);
+    
+    var backBtn = document.createElement("button");
+    backBtn.className = "back-btn";
+    backBtn.textContent = "Go Back";
+    buttonsContainerEl.appendChild(backBtn);
+    
+    var clearBtn = document.createElement("button");
+    clearBtn.className = "clear-btn";
+    clearBtn.textContent = "Clear High Scores";
+    buttonsContainerEl.appendChild(clearBtn);
+
+}
