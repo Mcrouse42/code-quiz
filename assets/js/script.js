@@ -219,4 +219,15 @@ function displayScore() {
     initialsFormEl.appendChild(submitBtnEl);
 }
 
-
+// Function to handle when user submits their initials for High Score
+function initialSubmitHandler(event) {
+    event.preventDefault();
+    var initialsInput = document.querySelector(".initials-input").value.toUpperCase();
+    var score = {
+        initials: initialsInput,
+        score: timer
+    }
+    initialScores.push(score);
+    localStorage.setItem("initialScores", JSON.stringify(initialScores));
+    highScoresPage();
+}
