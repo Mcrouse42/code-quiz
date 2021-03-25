@@ -190,3 +190,33 @@ function checkAnswer(event) {
         }
     }
 }
+
+// Function to finish quiz and display results
+function displayScore() {
+    document.getElementById("header-content").innerHTML = "";
+    document.getElementById("page-content").innerHTML = "";
+    var completedEl = document.createElement("h2");
+    completedEl.className = "title-question";
+    completedEl.textContent = "Quiz Completed!";
+    pageContentEl.appendChild(completedEl);
+    var finalScoreEl = document.createElement("p");
+    finalScoreEl.className = "final-score";
+    if (timer < 0) {
+        timer = 0;
+    }
+    finalScoreEl.textContent = "Your final score is " + timer + "!";
+    pageContentEl.appendChild(finalScoreEl);
+    var initialsFormEl = document.createElement("form");
+    initialsFormEl.className = "initials-form";
+    initialsFormEl.innerHTML = '<label class="initials-label" for="name">Enter initials:</label>'
+    pageContentEl.appendChild(initialsFormEl);
+    var initialsInputEl = document.createElement("input");
+    initialsInputEl.className = "initials-input";
+    initialsFormEl.appendChild(initialsInputEl);
+    var submitBtnEl = document.createElement("button");
+    submitBtnEl.className = "submit-btn";
+    submitBtnEl.textContent = "Submit";
+    initialsFormEl.appendChild(submitBtnEl);
+}
+
+
