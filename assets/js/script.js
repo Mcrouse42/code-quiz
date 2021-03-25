@@ -290,3 +290,6 @@ pageContentEl.addEventListener("click", checkAnswer);
 pageContentEl.addEventListener("submit", initialSubmitHandler);
 pageContentEl.addEventListener("click", restart);
 pageContentEl.addEventListener("click", clearStorage);
+
+// Load the landing page for the quiz
+loadLandingPage();
