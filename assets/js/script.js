@@ -65,7 +65,7 @@ function loadLandingPage() {
 
     var quizDescriptionEl = document.createElement("p");
     quizDescriptionEl.className = "quiz-description";
-    quizDescriptionEl.textContent = 'Answer all of the following coding-related questions within the time limit. If you choose the incorrect answer your score/time will be reduced by ten seconds!'
+    quizDescriptionEl.textContent = 'Please answer all of the following coding questions! If you choose a wrong answer your score/time will be reduced by ten seconds!'
     pageContentEl.appendChild(quizDescriptionEl);
 
     var startBtnContainerEl = document.createElement("div");
