@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --dark-blue: #0041C2;
+    --backgound-blue: #1589FF;
+    --light-blue: #5CB3FF;
+    --grey: #333;
+}
+
+/* Header Styles Start */
+header {
+    display: flex;
+    margin: 0 40px;
+    justify-content: space-between;
+}
+.view-high-scores {
+    color: var(--light-blue);
+}
+/* Header Styles End */
+
+/* Landing Page Styles Start */
+.page-content {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 65%;
+}
+.title-question {
+    display: flex;
+    justify-content: center;
+    margin: 0;   
+}
+.quiz-description {
+    display: flex;
+    text-align: center;
+}
+.start-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-btn {
+    width: 100px;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    background: var(--dark-blue);
+    color: white;
+    border-radius: 12px;
+}
+.start-btn:hover, .start-btn:active {
+    background: var(--light-blue);
+}
+/* Landing Page Styles End */
+
+/* Answers Styles Start */
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px
+}
+.answers {
+    width: 275px;
+    display: flex;
+    outline: none;
+    border: none;
+    margin: 4px 0;
+    padding: 10px 15px;
+    background: var(--dark-blue);
+    color: white;
+    border-radius: 12px;
+}
+.answers:hover, .answers:active {
+    background: var(--light-blue);
+}
+/* Answers Styles End */
+
+/* Styles for Correct/Wrong message */
+.correct {
+    border-top: 5px solid green;
+    color: green;
+    font-size: 30px;
+    width: 90%;
+}
+.wrong {
+    border-top: 5px solid red;
+    color: red;
+    font-size: 30px;
+    width: 90%;
+}
+.hide {
+    display: none;
+}
+/* Styles for Correct/Wrong message */
+
+/* Final Score/Initials Form Styles Start */
+.final-score {
+    margin: 10px 0 10px 5px;
+}
+.initials-label {
+padding: 5px;
+}
+.initials-input {
+padding: 5px;
+margin: 0 5px;
+}
+.submit-btn {
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    background: var(--dark-blue);
+    color: white;
+    border-radius: 12px;
+}
+.submit-btn:hover, .submit-btn:active {
+    background: var(--light-blue);
+}
+/* Final Score/Initials Form Styles End */
+
+/* Styles for Highscore page Start */
+.scores-list-container {
+    display: flex;
+    width: 50%;
+    align-self: center;
+}
+.scores-list-ol {
+    width: 100%;
+}
+.scores-list-ol li {
+    padding-left: 5px;
+    list-style-type: none;
+}
+.scores-list-ol li:nth-child(odd) {
+    background-color: var(--backgound-blue);
+}
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.back-btn, .clear-btn {
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    background: var(--dark-blue);
+    color: white;
+    border-radius: 12px;
+    margin: 0 10px;
+}
+.btn:hover, .btn:active {
+    background: var(--light-blue);
+}
+/* Styles for Highscore page End */
